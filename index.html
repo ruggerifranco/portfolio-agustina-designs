@@ -1,231 +1,810 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- font -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
-    <!-- iconos -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <!-- fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap"
+      rel="stylesheet"
+    />
 
-    <link rel="stylesheet" href="./assets/css/styles.css">
+    <!-- icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
 
-    <link rel="shortcut icon" href="./assets/img/logo.jpg" type="image/x-icon">
+    <!-- styles -->
+    <link rel="stylesheet" href="./styles.css" />
+
+    <!-- bootstrap -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
 
     <title>Agustina Designs</title>
-</head>
+  </head>
 
-<body>
+  <body>
+    <!-- NAV -->
+    <header
+      class="navbar d-flex justify-content-between align-items-center px-3"
+    >
+      <a href="#"><img class="logo" src="./images/logo.jpg" /></a>
 
-    <!-- Barra de navegacion -->
-    <header class="navbar">
-        <a href="#">
-            <img class="logo" src="./assets/img/logo.jpg" alt="Logo Agustina Designs" />
-        </a>
+      <input type="checkbox" id="menu-toggle" hidden />
+      <label for="menu-toggle" class="menu-icon"
+        ><i class="fas fa-bars"></i
+      ></label>
 
-        <!-- Checkbox oculto para toggle -->
-        <input type="checkbox" id="menu-toggle" hidden />
+      <nav class="nav-links">
+        <a href="#proyectos">Proyectos</a>
+        <a href="#sobremi">Sobre mí</a>
+        <a href="#servicios">Servicios</a>
+        <a href="#contacto">Contacto</a>
+      </nav>
+    </header>
 
-        <!-- Label que actúa como botón hamburguesa -->
-        <label for="menu-toggle" class="menu-icon">
-            <i class="fas fa-bars"></i>
-        </label>
+    <!-- HERO -->
+    <section
+      class="hero d-flex align-items-center justify-content-center text-center"
+    >
+      <div class="hero-content">
+        <h1>El diseño no es solo cómo se ve, sino cómo se siente</h1>
+        <a href="#proyectos" class="hero-button">Ver mis trabajos</a>
+      </div>
+    </section>
 
-        <!-- Menú de navegación -->
-        <nav class="nav-links">
-            <a href="#proyectos">Proyectos</a>
+    <!-- PROYECTOS -->
+    <section id="proyectos" class="proyectos">
+      <div class="container">
+        <h2 class="text-center mb-2">Mis Proyectos</h2>
+        <p class="text-center text-muted mb-5">
+          Trabajos realizados durante la carrera en distintas áreas del diseño
+          gráfico
+        </p>
+
+        <div class="row g-4">
+          <!-- PROYECTO 1 -->
+          <div class="col-12 col-sm-6 col-lg-4">
+            <div
+              class="card h-100 shadow proyecto-card"
+              data-tech="Illustrator Photoshop"
+            >
+              <img src="./images/img-cretas.jpg" class="card-img-top" />
+
+              <div class="card-body d-flex flex-column">
+                <h5 class="card-title">Cretas – Identidad de marca</h5>
+
+                <p class="small text-muted mb-2">Materia: Piezas Gráficas</p>
+
+                <p class="card-text">
+                  Desarrollo de sistema de identidad visual completo, incluyendo
+                  logotipo, grilla modular, paleta cromática y aplicaciones de
+                  marca en distintos soportes.
+                </p>
+
+                <div class="mb-3">
+                  <span class="badge bg-dark">Illustrator</span>
+                  <span class="badge bg-secondary">Photoshop</span>
+                </div>
+
+                <button
+                  class="btn btn-outline-dark mt-auto"
+                  data-bs-toggle="modal"
+                  data-bs-target="#modal1"
+                >
+                  Ver detalle
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- PROYECTO 6 -->
+          <div class="col-12 col-sm-6 col-lg-4">
+            <div class="card h-100 shadow proyecto-card" data-tech="Figma">
+              <img src="./images/proyecto-moviepick.png" class="card-img-top" />
+
+              <div class="card-body d-flex flex-column">
+                <h5>MoviePick – App UX/UI</h5>
+
+                <p class="small text-muted mb-2">Materia: UX/UI</p>
+
+                <p>
+                  Diseño de aplicación mobile con enfoque en experiencia de
+                  usuario, arquitectura de información, wireframes y prototipado
+                  interactivo.
+                </p>
+
+                <div class="mb-3">
+                  <span class="badge bg-dark">Figma</span>
+                </div>
+
+                <button
+                  class="btn btn-outline-dark mt-auto"
+                  data-bs-toggle="modal"
+                  data-bs-target="#modal6"
+                >
+                  Ver detalle
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- PROYECTO 2 -->
+          <div class="col-12 col-sm-6 col-lg-4">
+            <div
+              class="card h-100 shadow proyecto-card"
+              data-tech="Illustrator InDesign"
+            >
+              <img
+                src="./images/img-proyecto-emilia.png"
+                class="card-img-top"
+              />
+
+              <div class="card-body d-flex flex-column">
+                <h5>Folletería editorial</h5>
+
+                <p class="small text-muted mb-2">Materia: Tipografía</p>
+
+                <p>
+                  Diseño de piezas gráficas aplicando jerarquía visual, retícula
+                  editorial y composición tipográfica orientada a la lectura y
+                  comunicación efectiva.
+                </p>
+
+                <div class="mb-3">
+                  <span class="badge bg-dark">InDesign</span>
+                  <span class="badge bg-secondary">Illustrator</span>
+                </div>
+
+                <button
+                  class="btn btn-outline-dark mt-auto"
+                  data-bs-toggle="modal"
+                  data-bs-target="#modal2"
+                >
+                  Ver detalle
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- PROYECTO 3 -->
+          <div class="col-12 col-sm-6 col-lg-4">
+            <div
+              class="card h-100 shadow proyecto-card"
+              data-tech="Illustrator"
+            >
+              <img
+                src="./images/img-proyecto-tipografia.png"
+                class="card-img-top"
+              />
+              
+
+              <div class="card-body d-flex flex-column">
+                <h5>Composición tipográfica</h5>
+
+                <p class="small text-muted mb-2">Materia: Tipografía</p>
+
+                <p>
+                  Exploración formal del lenguaje tipográfico mediante
+                  composición visual, experimentación con jerarquías, contraste
+                  y estructura.
+                </p>
+
+                <div class="mb-3">
+                  <span class="badge bg-dark">Illustrator</span>
+                </div>
+
+                <button
+                  class="btn btn-outline-dark mt-auto"
+                  data-bs-toggle="modal"
+                  data-bs-target="#modal3"
+                >
+                  Ver detalle
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- PROYECTO 4 -->
+          <div class="col-12 col-sm-6 col-lg-4">
+            <div class="card h-100 shadow proyecto-card" data-tech="Photoshop">
+              <img
+                src="./images/img-proyeto-casamiento.jpg"
+                class="card-img-top"
+              />
+
+              <div class="card-body d-flex flex-column">
+                <h5>Wedding Design</h5>
+
+                <p class="small text-muted mb-2">Materia: Fotografía</p>
+
+                <p>
+                  Desarrollo de piezas gráficas para eventos, considerando
+                  estética, coherencia visual y adaptación del sistema gráfico a
+                  distintos formatos.
+                </p>
+
+                <div class="mb-3">
+                  <span class="badge bg-dark">Photoshop</span>
+                </div>
+
+                <button
+                  class="btn btn-outline-dark mt-auto"
+                  data-bs-toggle="modal"
+                  data-bs-target="#modal4"
+                >
+                  Ver detalle
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- PROYECTO 5 -->
+          <div class="col-12 col-sm-6 col-lg-4">
+            <div
+              class="card h-100 shadow proyecto-card"
+              data-tech="Illustrator"
+            >
+              <img
+                src="./images/img-proyecto-alegrarte.jpg"
+                class="card-img-top"
+              />
+
+              <div class="card-body d-flex flex-column">
+                <h5>Alegrarte – Diseño visual</h5>
+
+                <p class="small text-muted mb-2">Materia: Piezas Gráficas</p>
+
+                <p>
+                  Proyecto orientado a la expresión visual mediante color,
+                  composición y recursos gráficos con foco en la comunicación
+                  emocional.
+                </p>
+
+                <div class="mb-3">
+                  <span class="badge bg-dark">Illustrator</span>
+                </div>
+
+                <button
+                  class="btn btn-outline-dark mt-auto"
+                  data-bs-toggle="modal"
+                  data-bs-target="#modal5"
+                >
+                  Ver detalle
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="text-center mt-5">
+          <p class="text-muted mb-2">¿Querés ver más trabajos?</p>
+          <a
+            href="https://www.behance.net/agustinaavila5"
+            target="_blank"
+            class="btn btn-dark px-4 py-2"
+          >
+            Ver portfolio completo en Behance
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- SOBRE MI -->
+    <section id="sobremi" class="sobremi">
+      <div class="container">
+        <div class="row align-items-center">
+          <!-- FOTO -->
+          <div class="col-md-5 sobremi-imagen text-center">
+            <img src="./images/Perfil.webp" class="img-fluid rounded shadow" />
+          </div>
+
+          <div class="col-md-7 sobremi-texto">
+            <h2>Sobre mí</h2>
+
+            <p>
+              Hola, soy <strong>Agustina Avila</strong>, diseñadora gráfica con
+              enfoque en branding, diseño digital y experiencia de usuario. Me
+              apasiona crear soluciones visuales que no solo sean estéticas,
+              sino que también comuniquen de forma clara y estratégica.
+            </p>
+
+            <p>
+              Actualmente me encuentro formándome en la carrera de Diseño
+              Gráfico, complementando mis estudios con cursos de
+              <strong>UX/UI</strong>, diseño de interfaces y herramientas
+              digitales. Cuento con experiencia trabajando de manera freelance
+              en proyectos de identidad visual, redes sociales y diseño web.
+            </p>
+
+            <p>
+              Mi objetivo es seguir creciendo profesionalmente, desarrollando
+              proyectos que conecten con las personas y aporten valor a marcas y
+              emprendimientos.
+            </p>
+
+            <div class="mt-3">
+              <p class="mb-1">
+                <strong>Formación:</strong> Diseño Gráfico (en curso)
+              </p>
+              <p class="mb-1">
+                <strong>Especialidad:</strong> Branding, UX/UI y diseño digital
+              </p>
+              <p class="mb-3">
+                <strong>Modalidad:</strong> Freelance / Proyectos independientes
+              </p>
+            </div>
+
+            <!-- REDES -->
+            <div class="iconos-redes sobre-mi mt-3">
+              <a
+                href="https://www.instagram.com/agustinadesigns"
+                target="_blank"
+                ><i class="fab fa-instagram"></i
+              ></a>
+              <a href="https://www.behance.net/agustinaavila5" target="_blank"
+                ><i class="fab fa-behance"></i
+              ></a>
+              <a
+                href="https://www.linkedin.com/in/agustina-avila05"
+                target="_blank"
+                ><i class="fab fa-linkedin"></i
+              ></a>
+              <a href="mailto:agustinaavila05@gmail.com"
+                ><i class="fas fa-envelope"></i
+              ></a>
+              <a href="https://wa.me/5491156070568" target="_blank"
+                ><i class="fab fa-whatsapp"></i
+              ></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SERVICIOS -->
+    <section id="servicios" class="servicios">
+      <div class="container">
+        <h2>Mis Servicios</h2>
+
+        <div class="row g-4">
+          <div class="col-md-4 d-flex justify-content-center">
+            <div class="card-servicio text-center">
+              <h3>Identidad Visual</h3>
+              <a href="#" class="btn-servicio">Info</a>
+            </div>
+          </div>
+
+          <div class="col-md-4 d-flex justify-content-center">
+            <div class="card-servicio text-center">
+              <h3>Logotipos</h3>
+              <a href="#" class="btn-servicio">Info</a>
+            </div>
+          </div>
+
+          <div class="col-md-4 d-flex justify-content-center">
+            <div class="card-servicio text-center">
+              <h3>UX/UI</h3>
+              <a href="#" class="btn-servicio">Info</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACTO -->
+    <section class="contacto" id="contacto">
+      <div class="container">
+        <div class="contacto-contenedor">
+          <h2>Contacto</h2>
+
+          <form
+            class="formulario-contacto"
+            action="https://formspree.io/f/mqabbegp"
+            method="POST"
+          >
+            <input
+              type="text"
+              name="nombre"
+              placeholder="Tu nombre"
+              class="form-control mb-2"
+            />
+
+            <input
+              type="email"
+              name="email"
+              placeholder="Tu email"
+              class="form-control mb-2"
+            />
+
+            <textarea
+              name="mensaje"
+              placeholder="Tu mensaje"
+              class="form-control mb-2"
+            ></textarea>
+
+            <button type="submit" class="btn btn-dark">Enviar</button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+      <div class="footer-content container">
+        <div class="footer-section redes">
+          <h4>Seguime</h4>
+          <div class="iconos-redes">
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-behance"></i></a>
+            <a href="#"><i class="fab fa-linkedin"></i></a>
+            <a href="#"><i class="fas fa-envelope"></i></a>
+            <a href="#"><i class="fab fa-whatsapp"></i></a>
+          </div>
+        </div>
+
+        <div class="footer-section nav-footer">
+          <h4>Navegación</h4>
+          <nav class="footer-nav-links">
+            <a href="#">Inicio</a>
+            <a href="#proyectos">Mis proyectos</a>
             <a href="#sobremi">Sobre mí</a>
             <a href="#servicios">Servicios</a>
             <a href="#contacto">Contacto</a>
-        </nav>
-    </header>
-
-
-    <!-- banner de bienvenida / portada -->
-    <section class="hero">
-        <div class="hero-content">
-            <h1>El diseño no es solo cómo se ve, sino cómo se siente</h1>
-            <a href="#proyectos" class="hero-button">Ver mis trabajos</a>
+          </nav>
         </div>
-    </section>
 
-    <!-- Seccion proyectos -->
-    <section id="proyectos" class="proyectos">
-        <h2>Mis Proyectos</h2>
-        <div class="grid-proyectos">
-            <a href="https://www.behance.net/gallery/206554739/CRETAS-design1" target="_blank">
-                <img src="./assets/img/img-cretas.jpg" alt="Proyecto Cretas">
-            </a>
-            <a href="https://www.behance.net/gallery/211068547/Folleteria" target="_blank">
-                <img src="./assets/img/img-proyecto-emilia.png" alt="Proyecto Emilia">
-            </a>
-            <a href="./assets/pdf/proyecto-tipografia.pdf" download>
-                <img src="./assets/img/img-proyecto-tipografia.png" alt="Proyecto Tipografía">
-            </a>
-            <a href="https://www.behance.net/gallery/224689191/Wedding" target="_blank">
-                <img src="./assets/img/img-proyeto-casamiento.jpg" alt="Proyecto casamiento">
-            </a>
-            <a href="https://www.behance.net/gallery/206513381/Deco" target="_blank">
-                <img src="./assets/img/img-proyecto-alegrarte.jpg" alt="Proyecto alegrarte">
-            </a>
-            <a href="https://www.figma.com/proto/r5nTq6IrLncI5zZNa2YI8V/MoviePick?node-id=57-810" target="_blank">
-                <img src="./assets/img/proyecto-moviepick.png" alt="Proyecto moviePick">
-            </a>
+        <div class="footer-section creditos">
+          <p>Diseñado y desarrollado por <strong>Agustina Avila</strong> 💖</p>
         </div>
-        <div class="ver-mas">
-            <a href="https://www.behance.net/agustinaavila5" target="_blank" class="boton-ver-mas">
-                Ver más proyectos
-            </a>
-        </div>
-    </section>
-
-    <!-- Sobre mí -->
-    <section id="sobremi" class="sobremi">
-        <div class="sobremi-contenedor">
-            <div class="sobremi-imagen">
-                <img src="./assets/img/Perfil.webp" alt="Foto de Agustina Avila">
-            </div>
-            <div class="sobremi-texto">
-                <h2>Sobre mí</h2>
-                <p>¡Hola! Soy Agustina Avila, diseñadora gráfica y amante del diseño en todas sus formas. Me apasiona
-                    crear piezas visuales que comuniquen, emocionen y conecten con las personas. Este espacio refleja mi esencia creativa y mi forma de ver el mundo. ¡Gracias por
-                    estar acá!</p>
-                <div class="footer-section redes">
-                    <div class="iconos-redes sobre-mi">
-                        <a href="https://www.instagram.com/agustinadesigns" target="_blank" aria-label="Instagram">
-                            <i class="fab fa-instagram"></i>
-                        </a>
-                        <a href="https://www.behance.net/agustinaavila5" target="_blank" aria-label="Behance">
-                            <i class="fab fa-behance"></i>
-                        </a>
-                        <a href="https://www.linkedin.com/in/agustina-avila05" target="_blank" aria-label="LinkedIn">
-                            <i class="fab fa-linkedin"></i>
-                        </a>
-                        <a href="mailto:agustinaavila05@gmail.com" aria-label="Email">
-                            <i class="fas fa-envelope"></i>
-                        </a>
-                        <a href="https://wa.me/5491156070568" target="_blank" aria-label="WhatsApp">
-                            <i class="fab fa-whatsapp"></i>
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Servicios -->
-    <section id="servicios" class="servicios">
-        <h2>Mis Servicios</h2>
-        <div class="grid-servicios">
-            <div class="card-servicio">
-                <h3>Identidad Visual</h3>
-                <a href="https://wa.me/5491156070568?text=Hola%20Agustina!%20Quiero%20más%20info%20sobre%20Identidad%20Visual"
-                    target="_blank" class="btn-servicio">Info</a>
-            </div>
-
-            <div class="card-servicio">
-                <h3>Diseño de Logotipos</h3>
-                <a href="https://wa.me/5491156070568?text=Hola%20Agustina!%20Quiero%20más%20info%20sobre%20Diseño%20de%20Logotipos"
-                    target="_blank" class="btn-servicio">Info</a>
-            </div>
-
-            <div class="card-servicio">
-                <h3>Redes Sociales</h3>
-                <a href="https://wa.me/5491156070568?text=Hola%20Agustina!%20Quiero%20más%20info%20sobre%20Diseño%20para%20Redes%20Sociales"
-                    target="_blank" class="btn-servicio">Info</a>
-            </div>
-
-            <div class="card-servicio">
-                <h3>Diseño para eventos</h3>
-                <a href="https://wa.me/5491156070568?text=Hola%20Agustina!%20Quiero%20más%20info%20sobre%20Diseño%20para%20Redes%20Sociales"
-                    target="_blank" class="btn-servicio">Info</a>
-            </div>
-            <div class="card-servicio">
-                <h3>Folletería</h3>
-                <a href="https://wa.me/5491156070568?text=Hola%20Agustina!%20Quiero%20más%20info%20sobre%20Diseño%20para%20Redes%20Sociales"
-                    target="_blank" class="btn-servicio">Info</a>
-            </div>
-            <div class="card-servicio">
-                <h3>Diseño para emprendedores</h3>
-                <a href="https://wa.me/5491156070568?text=Hola%20Agustina!%20Quiero%20más%20info%20sobre%20Diseño%20para%20Redes%20Sociales"
-                    target="_blank" class="btn-servicio">Info</a>
-            </div>
-            <div class="card-servicio">
-                <h3>Diseño UX UI</h3>
-                <a href="https://wa.me/5491156070568?text=Hola%20Agustina!%20Quiero%20más%20info%20sobre%20Diseño%20para%20Redes%20Sociales"
-                    target="_blank" class="btn-servicio">Info</a>
-            </div>
-        </div>
-    </section>
-
-    <!-- Seccion contacto -->
-    <section class="contacto" id="contacto">
-        <div class="contacto-contenedor">
-            <h2>Contacto</h2>
-            <form action="https://formspree.io/f/mqabbegp" method="POST" class="formulario-contacto">
-                <input type="text" name="name" placeholder="Tu nombre" required />
-                <input type="email" name="email" placeholder="Tu email" required />
-                <input type="text" name="subject" placeholder="Asunto (opcional)" />
-                <textarea name="message" rows="5" placeholder="Tu mensaje" required></textarea>
-
-                <!-- Para redirigir a una página de gracias -->
-                <input type="hidden" name="_redirect" value="gracias.html" />
-
-                <button type="submit" class="btn-contacto">Enviar</button>
-            </form>
-        </div>
-    </section>
-
-
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="footer-content">
-
-            <div class="footer-section redes">
-                <h4>Seguime</h4>
-                <div class="iconos-redes">
-                    <a href="https://www.instagram.com/agustinadesigns" target="_blank" aria-label="Instagram">
-                        <i class="fab fa-instagram"></i>
-                    </a>
-                    <a href="https://www.behance.net/agustinaavila5" target="_blank" aria-label="Behance">
-                        <i class="fab fa-behance"></i>
-                    </a>
-                    <a href="https://www.linkedin.com/in/agustina-avila05" target="_blank" aria-label="LinkedIn">
-                        <i class="fab fa-linkedin"></i>
-                    </a>
-                    <a href="mailto:agustinaavila05@gmail.com" aria-label="Email">
-                        <i class="fas fa-envelope"></i>
-                    </a>
-                    <a href="https://wa.me/5491156070568" target="_blank" aria-label="WhatsApp">
-                        <i class="fab fa-whatsapp"></i>
-                    </a>
-                </div>
-            </div>
-
-            <div class="footer-section nav-footer">
-                <h4>Navegación</h4>
-                <nav class="footer-nav-links">
-                    <a href="#">Inicio</a>
-                    <a href="#proyectos">Mis proyectos</a>
-                    <a href="#sobremi">Sobre mí</a>
-                    <a href="#servicios">Servicios</a>
-                    <a href="#contacto">Contacto</a>
-                </nav>
-            </div>
-
-            <div class="footer-section creditos">
-                <p>Diseñado y desarrollado por <strong>Agustina Avila</strong> 💖</p>
-            </div>
-
-        </div>
+      </div>
     </footer>
 
-    <!-- flecha para subir -->
-    <a href="#" class="btn-subir">
-        <img src="./assets/img/flecha.png" alt="Ir arriba">
-    </a>
+    <!-- MODAL 1 -->
+    <div class="modal fade" id="modal1">
+      <div class="modal-dialog modal-lg">
+        <div class="modal-content p-3">
+          <div id="carousel1" class="carousel slide">
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img src="./images/cretas1.jpeg" class="d-block w-100" />
+              </div>
 
-</body>
+              <div class="carousel-item">
+                <img src="./images/cretas2.jpeg" class="d-block w-100" />
+              </div>
 
+              <div class="carousel-item">
+                <img src="./images/cretas3.PNG" class="d-block w-100" />
+              </div>
+
+              <div class="carousel-item">
+                <img src="./images/cretas4.PNG" class="d-block w-100" />
+              </div>
+
+              <div class="carousel-item">
+                <img src="./images/cretas5.PNG" class="d-block w-100" />
+              </div>
+
+              <div class="carousel-item">
+                <img src="./images/cretas6.PNG" class="d-block w-100" />
+              </div>
+
+              <div class="carousel-item">
+                <img src="./images/cretas7.PNG" class="d-block w-100" />
+              </div>
+
+              <div class="carousel-item">
+                <img src="./images/cretas8.PNG" class="d-block w-100" />
+              </div>
+            </div>
+
+            <button
+              class="carousel-control-prev"
+              data-bs-target="#carousel1"
+              data-bs-slide="prev"
+            >
+              <span class="carousel-control-prev-icon"></span>
+            </button>
+
+            <button
+              class="carousel-control-next"
+              data-bs-target="#carousel1"
+              data-bs-slide="next"
+            >
+              <span class="carousel-control-next-icon"></span>
+            </button>
+          </div>
+
+          <div class="mt-3">
+            <h5>Detalle del proyecto</h5>
+            <p>
+              Proyecto de branding donde se desarrolló una identidad visual
+              completa.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- MODAL 2 -->
+<div class="modal fade" id="modal2">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content p-3">
+      
+      <div id="carousel2" class="carousel slide">
+        
+        <div class="carousel-inner">
+          
+          <div class="carousel-item active">
+            <img src="./images/emilia1.jpeg" class="d-block w-100" />
+          </div>
+
+          <div class="carousel-item">
+            <img src="./images/emilia2.jpeg" class="d-block w-100" />
+          </div>
+
+          <div class="carousel-item">
+            <img src="./images/emilia4.png" class="d-block w-100" />
+          </div>
+          <div class="carousel-item">
+            <img src="./images/img-proyecto-emilia3.png" class="d-block w-100" />
+          </div>
+
+        </div>
+
+        <button
+          class="carousel-control-prev"
+          data-bs-target="#carousel2"
+          data-bs-slide="prev"
+        >
+          <span class="carousel-control-prev-icon"></span>
+        </button>
+
+        <button
+          class="carousel-control-next"
+          data-bs-target="#carousel2"
+          data-bs-slide="next"
+        >
+          <span class="carousel-control-next-icon"></span>
+        </button>
+
+      </div>
+
+      <div class="mt-3">
+        <h5>Folletería editorial</h5>
+        <p>Diseño editorial con jerarquía visual y retícula.</p>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+    <!-- MODAL 3 -->
+    <div class="modal fade" id="modal3">
+      <div class="modal-dialog modal-lg">
+        <div class="modal-content p-3">
+          <div id="carousel3" class="carousel slide">
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img
+                  src="./images/img-proyecto-tipografia.png"
+                  class="d-block w-100"
+                />
+              </div>
+
+              <div class="carousel-item">
+                <img
+                  src="./images/img-proyecto-tipografia2.png"
+                  class="d-block w-100"
+                />
+              </div>
+              <div class="carousel-item">
+                <img
+                  src="./images/img-proyecto-tipografia3.png"
+                  class="d-block w-100"
+                />
+              </div>
+              <div class="carousel-item">
+                <img
+                  src="./images/img-proyecto-tipografia4.png"
+                  class="d-block w-100"
+                />
+              </div>
+              <div class="carousel-item">
+                <img
+                  src="./images/img-proyecto-tipografia5.png"
+                  class="d-block w-100"
+                />
+              </div>
+            </div>
+
+            <button
+              class="carousel-control-prev"
+              data-bs-target="#carousel3"
+              data-bs-slide="prev"
+            >
+              <span class="carousel-control-prev-icon"></span>
+            </button>
+
+            <button
+              class="carousel-control-next"
+              data-bs-target="#carousel3"
+              data-bs-slide="next"
+            >
+              <span class="carousel-control-next-icon"></span>
+            </button>
+          </div>
+
+          <div class="mt-3">
+            <h5>Composición tipográfica</h5>
+            <p>Exploración visual del lenguaje tipográfico.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- MODAL 4 -->
+    <div class="modal fade" id="modal4">
+      <div class="modal-dialog modal-lg">
+        <div class="modal-content p-3">
+          <div id="carousel4" class="carousel slide">
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img src="./images/casamiento1.jpeg" class="d-block w-100" />
+              </div>
+
+              <div class="carousel-item">
+                <img src="./images/casamiento2.jpeg" class="d-block w-100" />
+              </div>
+
+              <div class="carousel-item">
+                <img src="./images/casamiento3.PNG" class="d-block w-100" />
+              </div>
+
+            </div>
+
+            <button
+              class="carousel-control-prev"
+              data-bs-target="#carousel4"
+              data-bs-slide="prev"
+            >
+              <span class="carousel-control-prev-icon"></span>
+            </button>
+
+            <button
+              class="carousel-control-next"
+              data-bs-target="#carousel4"
+              data-bs-slide="next"
+            >
+              <span class="carousel-control-next-icon"></span>
+            </button>
+          </div>
+
+          <div class="mt-3">
+            <h5>Wedding Design</h5>
+            <p>Diseño gráfico para eventos con identidad visual.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- MODAL 5 -->
+    <div class="modal fade" id="modal5">
+      <div class="modal-dialog modal-lg">
+        <div class="modal-content p-3">
+          <div id="carousel5" class="carousel slide">
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img src="./images/alegrarte1.jpeg" class="d-block w-100" />
+              </div>
+
+              <div class="carousel-item">
+                <img src="./images/alegrarte2.jpeg" class="d-block w-100" />
+              </div>
+
+              <div class="carousel-item">
+                <img src="./images/alegrarte3.jpg" class="d-block w-100" />
+              </div>
+              
+              <div class="carousel-item">
+                <img src="./images/img-proyecto-alegrarte.jpg" class="d-block w-100" />
+              </div>
+            </div>
+
+            <button
+              class="carousel-control-prev"
+              data-bs-target="#carousel5"
+              data-bs-slide="prev"
+            >
+              <span class="carousel-control-prev-icon"></span>
+            </button>
+
+            <button
+              class="carousel-control-next"
+              data-bs-target="#carousel5"
+              data-bs-slide="next"
+            >
+              <span class="carousel-control-next-icon"></span>
+            </button>
+          </div>
+
+          <div class="mt-3">
+            <h5>Alegrarte</h5>
+            <p>Proyecto visual enfocado en color y composición.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- MODAL 6 -->
+    <div class="modal fade" id="modal6">
+      <div class="modal-dialog modal-lg">
+        <div class="modal-content p-3">
+          <div id="carousel6" class="carousel slide">
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img
+                  src="./images/proyecto-moviepick.png"
+                  class="d-block w-100"
+                />
+              </div>
+
+              <div class="carousel-item">
+                <img
+                  src="./images/proyecto-moviepick.png"
+                  class="d-block w-100"
+                />
+              </div>
+            </div>
+
+            <button
+              class="carousel-control-prev"
+              data-bs-target="#carousel6"
+              data-bs-slide="prev"
+            >
+              <span class="carousel-control-prev-icon"></span>
+            </button>
+
+            <button
+              class="carousel-control-next"
+              data-bs-target="#carousel6"
+              data-bs-slide="next"
+            >
+              <span class="carousel-control-next-icon"></span>
+            </button>
+          </div>
+
+          <!-- VIDEO -->
+          <div class="ratio ratio-16x9 mt-3">
+            <iframe
+              src="https://www.youtube.com/embed/EuglqGDPPSk"
+              title="MoviePick UX/UI"
+              frameborder="0"
+              allow="
+                accelerometer;
+                autoplay;
+                clipboard-write;
+                encrypted-media;
+                gyroscope;
+                picture-in-picture;
+              "
+              allowfullscreen
+            ></iframe>
+          </div>
+          <div class="mt-3">
+            <h5>MoviePick – UX/UI</h5>
+            <p>Diseño de app mobile con enfoque en experiencia de usuario.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
 </html>
